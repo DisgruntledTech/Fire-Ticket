@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/pico.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script type="module" src="./js/new-ticket.mjs" ></script>
+    <title>New Ticket</title>
+</head>
+<body>
+  <nav class="container-fluid">
+    <ul>
+      <li><h2 style="font-family: 'Roboto', sans-serif;"><span class="material-symbols-outlined">
+        local_fire_department
+        </span> 
+        <a href="new-ticket.html" class="contrast"><strong>Fire Ticket</strong></a></h2>
+      </li>
+    </ul>    
+  </nav>
+  <main class="container">
+    <h1>New Ticket</h1>
+
+        <!-- Grid -->
+        <form id="new-ticket-form" name="new-ticket-form">
+          <div class="grid">
+            <label for="firstname">
+              First name
+              <input type="text" id="firstname" name="firstname" placeholder="First name" required>
+            </label>
+        
+            <label for="lastname">
+              Last name
+              <input type="text" id="lastname" name="lastname" placeholder="Last name" required>
+            </label>
+        
+            <label for="email">
+              Email address
+              <input type="email" id="email" name="email" placeholder="Email address" required>
+            </label>
+            
+            <label for="telephone">
+              Telephone Number
+              <input type="tel" id="telephone" name="telephone" placeholder="Telephone Number" required>
+            </label>
+            
+          </div>
+                
+          <div>
+            <label for="description">Request Description</label>
+            <textarea id="description" name="description" role="text" rows="7" maxlength="5000"></textarea>
+          </div>
+                  
+          <!-- Button -->
+          <button type="button" id="submit-ticket">Submit</button>
+        </form>              
+</main>
+<footer>
+  <div class="container">
+    <small>Page CSS by <a href="https://picocss.com" class="secondary">Pico</a> • <a href="https://github.com/DisgruntledTech/Fire-Ticket" class="secondary">Source code on GitHub</a> • <a href="#" class="secondary">NPM Package</a></small>
+  </div>
+</footer>
+</body>
+</html>
