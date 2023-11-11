@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/pico.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script type="module" src="./js/index.mjs" ></script>
+    <title>Fire Ticket</title>
+</head>
+<body>
+    <div class="hero" data-theme="dark">
+        <nav class="container-fluid">
+          <ul>
+            <li><a href="index.html" class="contrast"><strong>Fire Ticket</strong></a></li>
+          </ul>
+          <ul>
+            <li>
+              <details role="list" dir="rtl">
+                <summary aria-haspopup="listbox" role="link" class="contrast">Menu</summary>
+                <ul role="listbox">
+                  <li><a href="index.html">Opened Tickets</a></li>
+                  <li><a href="index.html">Closed Tickets</a></li>
+                  <li><a href="new-ticket.html">New Ticket</a></li>
+                </ul>
+              </details>
+            </li>            
+          </ul>
+        </nav>
+        <header class="container">
+          <hgroup>
+            <h1>Fire Ticket</h1>
+            <h2>A general purpose trouble ticket application focused on a clean text rich design</h2>
+          </hgroup>
+          <p><a href="index.html">Get Started</a></p>
+        </header>
+      </div><!-- ./ Hero -->
+  
+      <!-- Main -->
+      <main class="container">
+        <div class="grid">
+  
+          <section>
+            <hgroup>
+              <h2>Source Code</h2>
+              <h3>1/15/2023</h3>
+            </hgroup>
+            <p>The Fire Ticket project has been initialed on GitHub!</p>            
+          </section>
+    
+        </div>
+      </main><!-- ./ Main -->
+  
+      <!-- Subscribe -->
+      <section aria-label="Subscribe">
+        <div class="container">
+          <article>
+            <hgroup>
+              <h2>Join the Project</h2>
+              <h3 id="visitor-name"></h3>
+            </hgroup>
+              <div class="grid">
+                <div><input type="text" id="firstname" name="firstname" placeholder="First name" aria-label="First name" required></div>
+                <div><input type="email" id="email" name="email" placeholder="Email address" aria-label="Email address" required></div>                                          
+              </div>
+              
+              <div>
+                <button id="subscribe" type="button">Subscribe</button>
+                <p id="add-status-message"></p>
+              </div>
+                            
+          </article>
+        </div>
+      </section><!-- ./ Subscribe -->
+  
+      <!-- Footer -->
+      <footer class="container">
+        <small>Page CSS by <a href="https://picocss.com" class="secondary">Pico</a> • <a href="https://github.com/DisgruntledTech/Fire-Ticket" class="secondary">Source code on GitHub</a> • <a href="#" class="secondary">NPM Package</a></small>
+      </footer><!-- ./ Footer -->
+  
+</body>
+</html>
