@@ -16,27 +16,35 @@
     <div class="hero" data-theme="dark">
         <nav class="container-fluid">
           <ul>
-            <li><a href="index.html" class="contrast"><strong>Fire Ticket</strong></a></li>
+            <li>
+              <div style="font-family: 'Roboto', sans-serif;"><span class="material-symbols-outlined">
+              local_fire_department
+              </span> 
+              <a href="index.html" class="contrast"><strong>Fire Ticket</strong></a></div>
+            </li>
           </ul>
           <ul>
+            <li><span id="displayName"></span></li>
             <li>
               <details role="list" dir="rtl">
                 <summary aria-haspopup="listbox" role="link" class="contrast">Menu</summary>
                 <ul role="listbox">
-                  <li><a href="index.html">Opened Tickets</a></li>
+                  <li><a href="opened-tickets.html">Opened Tickets</a></li>
                   <li><a href="index.html">Closed Tickets</a></li>
                   <li><a href="new-ticket.html">New Ticket</a></li>
+                  <li><a href="subscribers-list.html">Subscribers List</a></li>                  
                 </ul>
               </details>
             </li>            
-          </ul>
+        </ul>          
         </nav>
         <header class="container">
           <hgroup>
             <h1>Fire Ticket</h1>
-            <h2>A general purpose trouble ticket application focused on a clean text rich design</h2>
-          </hgroup>
-          <p><a href="index.html">Get Started</a></p>
+            <h2>A general purpose trouble ticket application focused on a clean text rich design.</h2>
+          </hgroup>          
+          <p><a href="https://fire-ticket-ff8a8.web.app/">View a working prototype of Fire Ticket!</a></p>
+          
         </header>
       </div><!-- ./ Hero -->
   
@@ -45,11 +53,16 @@
         <div class="grid">
   
           <section>
-            <hgroup>
-              <h2>Source Code</h2>
-              <h3>1/15/2023</h3>
-            </hgroup>
-            <p>The Fire Ticket project has been initialed on GitHub!</p>            
+            <h2>Project Repository on GitHub</h2>
+              <ul>
+                <li>Created: <span id="created"></span></li>
+                <li>Last Updated: <span id="lastUpdated"></span></li>
+                <li>Last Push: <span id="pushed"></span></li>
+              </ul>
+              
+              <!--https://api.github.com/repos/DisgruntledTech/Fire-Ticket-->
+            
+            <p><a href="https://github.com/DisgruntledTech/Fire-Ticket">The source code for the Fire Ticket project is on GitHub!</a></p>
           </section>
     
         </div>
