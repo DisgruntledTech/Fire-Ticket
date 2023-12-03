@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <script src="/subscribers-list.1a47f625.js"></script><script src="/new-ticket.1848bb91.js" defer=""></script>
+    <script src="/subscribers-list.1a47f625.js"></script><script src="/opened-tickets.aa722ba1.js" defer=""></script>
     <title>New Ticket</title>
 </head>
 <body>
@@ -20,14 +20,14 @@
         </span> 
         <a href="/index.html" class="contrast"><strong>Fire Ticket</strong></a></div>
       </li>
-    </ul> 
+    </ul>
     <ul>
       <li><span id="displayName"></span></li>
       <li>
         <details role="list" dir="rtl">
           <summary aria-haspopup="listbox" role="link" class="contrast">Menu</summary>
           <ul role="listbox">
-            <li><a href="/opened-tickets.html">Opened Tickets</a></li>
+            <li><a href="/index.html">Opened Tickets</a></li>
             <li><a href="/index.html">Closed Tickets</a></li>
             <li><a href="/new-ticket.html">New Ticket</a></li>
             <li><a href="/subscribers-list.html">Subscribers List</a></li>                  
@@ -37,44 +37,20 @@
   </ul>  
   </nav>
   <main class="container">
-    <h1>New Ticket</h1>
-
-        <!-- Grid -->
-        <form id="new-ticket-form" name="new-ticket-form">
-          <input type="hidden" name="user-id" id="user-id">
-          <div class="grid">
-            <label for="firstname">
-              First name
-              <input type="text" id="firstname" name="firstname" placeholder="First name" required="">
-            </label>
-        
-            <label for="lastname">
-              Last name
-              <input type="text" id="lastname" name="lastname" placeholder="Last name" required="">
-            </label>
-        
-            <label for="email">
-              Email address
-              <input type="email" id="email" name="email" placeholder="Email address" required="">
-            </label>
-            
-            <label for="telephone">
-              Telephone Number
-              <input type="tel" id="telephone" name="telephone" placeholder="Telephone Number" required="">
-            </label>
-            
-          </div>
-                
-          <div>
-            <label for="description">Description</label>
-            <textarea id="description" name="description" role="text" rows="7" maxlength="5000"></textarea>
-          </div>
-                  
-          <!-- Button -->
-          <button type="button" id="submit-ticket">Submit</button>
-        </form>
-        <h6 id="add-status-message"></h6>            
-</main>
+    <h1>Opened Tickets</h1>
+        <table id="ticket-table">
+            <thead>
+                <tr>
+                <th scope="col">Ticket ID</th>
+                <th scope="col">Opened</th>
+                <th scope="col">Customer</th>
+                <th scope="col">Category</th>
+                </tr>
+            </thead>
+            <tbody id="ticket-table-body">                                
+            </tbody>                       
+        </table>
+  </main>
 <footer>
   <div class="container">
     <small>Page CSS by <a href="https://picocss.com" class="secondary">Pico</a> • <a href="https://github.com/DisgruntledTech/Fire-Ticket" class="secondary">Source code on GitHub</a> • <a href="#" class="secondary">NPM Package</a></small>
