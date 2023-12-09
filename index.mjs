@@ -7,13 +7,14 @@ import {initializeApp } from 'firebase/app';
 import {getAuth, onAuthStateChanged, GoogleAuthProvider, signInWithRedirect } from 'firebase/auth';
 import {getFirestore, doc, getDoc, updateDoc, arrayUnion, serverTimestamp, increment, collection, setDoc, addDoc } from 'firebase/firestore';
 
+//modify the firebaseConfig to match your own project
 const firebaseConfig = {
-    apiKey: "AIzaSyCme_IFDHxMiL3SrY0WHaAS8oEbTQUmrRQ",
+    apiKey: "",
     authDomain: "fire-ticket-ff8a8.firebaseapp.com",
     projectId: "fire-ticket-ff8a8",
     storageBucket: "fire-ticket-ff8a8.appspot.com",
-    messagingSenderId: "864161380835",
-    appId: "1:864161380835:web:bee986f41cae2c30d888d6",
+    messagingSenderId: "",
+    appId: "",
     measurementId: "G-Y3ZS9K7ZTR"
   };
 
