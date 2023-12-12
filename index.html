@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/index.1f8823c9.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+    <link rel="stylesheet" href="css/pico.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <script src="/subscribers-list.1a47f625.js"></script><script src="/index.20802f4a.js" defer=""></script>
+    <script type="module" src="./js/index.mjs" ></script>
     <title>Fire Ticket</title>
 </head>
 <body>
@@ -17,23 +17,23 @@
         <nav class="container-fluid">
           <ul>
             <li>
-              <div style="font-family: Roboto, sans-serif"><span class="material-symbols-outlined">
+              <div style="font-family: 'Roboto', sans-serif;"><span class="material-symbols-outlined">
               local_fire_department
               </span> 
-              <a href="/index.html" class="contrast"><strong>Fire Ticket</strong></a></div>
+              <a href="index.html" class="contrast"><strong>Fire Ticket</strong></a></div>
             </li>
           </ul>
           <ul>
             <li><span id="displayName"></span></li>
-            <li><span id="loginButton" style="display: none"><a href="#" role="button">Login</a></span></li>
+            <li><span id="login-button-span" style="display:none;"><a id="login-button" href="#" role="button">Login</a></span></li>
             <li>
               <details role="list" dir="rtl">
                 <summary aria-haspopup="listbox" role="link" class="contrast">Menu</summary>
                 <ul role="listbox">
-                  <li><a href="/opened-tickets.html">Opened Tickets</a></li>
-                  <li><a href="/index.html">Closed Tickets</a></li>
-                  <li><a href="/new-ticket.html">New Ticket</a></li>
-                  <li><a href="/subscribers-list.html">Subscribers List</a></li>                  
+                  <li><a href="opened-tickets.html">Opened Tickets</a></li>
+                  <li><a href="index.html">Closed Tickets</a></li>
+                  <li><a href="new-ticket.html">New Ticket</a></li>
+                  <li><a href="subscribers-list.html">Subscribers List</a></li>                  
                 </ul>
               </details>
             </li>            
@@ -78,8 +78,8 @@
               <h3 id="visitor-name"></h3>
             </hgroup>
               <div class="grid">
-                <div><input type="text" id="firstname" name="firstname" placeholder="First name" aria-label="First name" required=""></div>
-                <div><input type="email" id="email" name="email" placeholder="Email address" aria-label="Email address" required=""></div>                                          
+                <div><input type="text" id="firstname" name="firstname" placeholder="First name" aria-label="First name" required></div>
+                <div><input type="email" id="email" name="email" placeholder="Email address" aria-label="Email address" required></div>                                          
               </div>
               
               <div>
