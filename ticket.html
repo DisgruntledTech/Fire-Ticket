@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/ticket.1f8823c9.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+    <link rel="stylesheet" href="css/pico.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <script src="/subscribers-list.6e52e743.js"></script><script src="/ticket.fbe3c7bf.js" defer=""></script>
+    <script type="module" src="./js/ticket.mjs" ></script>
     <title>Ticket</title>
 </head>
 <body>
   <nav class="container-fluid">
     <ul>
-      <li><div style="font-family: Roboto, sans-serif"><span class="material-symbols-outlined">
+      <li><div style="font-family: 'Roboto', sans-serif;"><span class="material-symbols-outlined">
         local_fire_department
         </span> 
-        <a href="/index.html" class="contrast"><strong>Fire Ticket</strong></a></div>
+        <a href="index.html" class="contrast"><strong>Fire Ticket</strong></a></div>
       </li>
     </ul> 
     <ul>
@@ -27,10 +27,10 @@
         <details role="list" dir="rtl">
           <summary aria-haspopup="listbox" role="link" class="contrast">Menu</summary>
           <ul role="listbox">
-            <li><a href="/opened-tickets.html">Opened Tickets</a></li>
-            <li><a href="/index.html">Closed Tickets</a></li>
-            <li><a href="/new-ticket.html">New Ticket</a></li>
-            <li><a href="/subscribers-list.html">Subscribers List</a></li>                  
+            <li><a href="opened-tickets.html">Opened Tickets</a></li>
+            <li><a href="index.html">Closed Tickets</a></li>
+            <li><a href="new-ticket.html">New Ticket</a></li>
+            <li><a href="subscribers-list.html">Subscribers List</a></li>                  
           </ul>
         </details>
       </li>            
@@ -44,22 +44,22 @@
           <div class="grid">
             <label for="firstname">
               Customer First name
-              <input type="text" id="firstname" name="firstname" placeholder="First name" required="">
+              <input type="text" id="firstname" name="firstname" placeholder="First name" required>
             </label>
         
             <label for="lastname">
               Customer Last name
-              <input type="text" id="lastname" name="lastname" placeholder="Last name" required="">
+              <input type="text" id="lastname" name="lastname" placeholder="Last name" required>
             </label>
         
             <label for="email">
               Customer Email
-              <input type="email" id="email" name="email" placeholder="Email address" required="">
+              <input type="email" id="email" name="email" placeholder="Email address" required>
             </label>
             
             <label for="telephone">
               Customer Phone Number
-              <input type="tel" id="telephone" name="telephone" placeholder="Telephone Number" required="">
+              <input type="tel" id="telephone" name="telephone" placeholder="Telephone Number" required>
             </label>
             
           </div>
@@ -67,7 +67,7 @@
           <div class="grid">
             <label for="ticket-id">
               Ticket ID
-              <input type="text" id="ticket-id" name="ticket-id" placeholder="Ticket ID" required="" disabled="">
+              <input type="text" id="ticket-id" name="ticket-id" placeholder="Ticket ID" required disabled>
             </label>
 
             <label for="ticket-type">
@@ -80,12 +80,12 @@
                        
             <label for="owner-email">
               Ticket Owner
-              <input type="email" id="owner-email" name="owner-email" placeholder="Owner Email" required="">
+              <input type="email" id="owner-email" name="owner-email" placeholder="Owner Email" required>
             </label>
             
             <label for="ownership-date">
               Ownership Date
-              <input type="date" id="ownership-date" name="ownership-date" placeholder="Ownership Date" required="">
+              <input type="date" id="ownership-date" name="ownership-date" placeholder="Ownership Date" required>
             </label>
             
           </div>
@@ -95,6 +95,7 @@
               Ticket Status
               <select name="ticket-status" id="ticket-status">
                 <option value="Opened">Opened</option>
+                <option value="Resolved">Resolved</option>
                 <option value="Closed">Closed</option>
                 <option value="Pending">Pending</option>
               </select>
@@ -102,17 +103,17 @@
 
             <label for="ticket-opened">
               Ticket Opened
-              <input type="date" id="ticket-opened" name="ticket-opened" placeholder="Ticket Opened" required="">
+              <input type="date" id="ticket-opened" name="ticket-opened" placeholder="Ticket Opened" required>
             </label>
 
             <label for="ticket-resolved">
               Ticket Resolved
-              <input type="date" id="ticket-resolved" name="ticket-resolved" placeholder="Ticket Resolved" required="">
+              <input type="date" id="ticket-resolved" name="ticket-resolved" placeholder="Ticket Resolved" required>
             </label>
                        
             <label for="ticket-closed">
               Ticket Closed
-              <input type="date" id="ticket-closed" name="ticket-closed" placeholder="Ticket Closed" required="">
+              <input type="date" id="ticket-closed" name="ticket-closed" placeholder="Ticket Closed" required>
             </label>
                         
           </div>
@@ -121,17 +122,18 @@
           
             <label for="created-by">
               Created by
-              <input type="text" id="created-by" name="created-by" placeholder="Created by" required="">
+              <input type="text" id="created-by" name="created-by" placeholder="Created by" required>
             </label>
                     
             <label for="updated-by">
               Updated by
-              <input type="text" id="updated-by" name="updated-by" placeholder="Updated by" required="">
+              <input type="text" id="updated-by" name="updated-by" placeholder="Updated by" required>
             </label>
 
             <label for="last-updated">
               Last Updated
-              <input type="date" id="last-updated" name="last-updated" placeholder="Last Updated" required="">
+              <input type="hidden" id="time-stamp" name="time-stamp">
+              <input type="date" id="last-updated" name="last-updated" placeholder="Last Updated" required>
             </label>
 
           </div>
@@ -147,7 +149,13 @@
           </div>
 
           <!-- Button -->
-          <button type="button" id="update-ticket">Update</button>
+          <div>
+            <button id="take-ownership">Take Ownership</button>       
+            <button id="resolve-ticket">Resolve Ticket</button>
+            <button id="close-ticket">Close Ticket</button>
+            <button id="update-ticket">Update Ticket</button>
+          </div>
+          
         </form>
         <h2 id="add-status-message"></h2>            
 </main>
