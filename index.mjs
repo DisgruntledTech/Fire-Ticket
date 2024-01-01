@@ -7,15 +7,14 @@ import {initializeApp } from 'firebase/app';
 import {getAuth, onAuthStateChanged, GoogleAuthProvider, signInWithRedirect } from 'firebase/auth';
 import {getFirestore, doc, getDoc, updateDoc, arrayUnion, serverTimestamp, increment, collection, setDoc, addDoc } from 'firebase/firestore';
 
-//modify the firebaseConfig to match your own project
 const firebaseConfig = {
     apiKey: "",
-    authDomain: "fire-ticket-ff8a8.firebaseapp.com",
-    projectId: "fire-ticket-ff8a8",
-    storageBucket: "fire-ticket-ff8a8.appspot.com",
+    authDomain: "",
+    projectId: "",
+    storageBucket: "",
     messagingSenderId: "",
     appId: "",
-    measurementId: "G-Y3ZS9K7ZTR"
+    measurementId: ""
   };
 
 const firebaseApp = initializeApp(firebaseConfig);
@@ -30,6 +29,7 @@ onAuthStateChanged(auth, user => {
         document.getElementById("email").value = user.email;
         document.getElementById("displayName").innerText = "Hello " + user.displayName;        
     } else {
+        console.log("not logged in yet");
         document.getElementById("login-button-span").style.display = "inline";
         //signInWithRedirect(auth, provider);
     }
@@ -38,6 +38,7 @@ onAuthStateChanged(auth, user => {
 
 // Listeners and events
 document.getElementById("subscribe").addEventListener('click', validateForm);
+document.getElementById("login-button").addEventListener('click', loginApp);
 document.addEventListener('DOMContentLoaded',gitHubStatusDetails());
 
 
@@ -110,4 +111,8 @@ function gitHubStatusDetails(){
         document.getElementById('pushed').innerText = pushed.toLocaleDateString();
             }       
         );
+}
+
+function loginApp(){
+    signInWithRedirect(auth, provider)
 }
