@@ -1,6 +1,6 @@
 # Fire-Ticket
 JavaScript based ticketing system with code examples.
-Currently, this is just the html for the over concept of the application.  JavaScript mjs files will be added soon.
+Pure old fashioned html MPA with non-compiled javascript to see how fast and easy we can make a usable project without all the full stack nonsense.
 
 This project is using Pico for the css.  The project files are uncompiled files that can be added to your own project in whatever file structure you are using.  You will need to use your own Google Firebase config in each module.
 
